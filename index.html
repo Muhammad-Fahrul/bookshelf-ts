@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4029ef37cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>shelfbookApp</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Book Shelf</h1>
+    </header>
+    <main>
+      <section>
+        <div class="section-header book">
+          <h2>New BOOK</h2>
+          <p>Save Your BOOKS here!</p>
+        </div>
+        <form data-id="book-form">
+          <div>
+            <label for="title">Title</label>
+            <input data-id="title" type="text" required />
+          </div>
+          <div>
+            <label for="author">Author</label>
+            <input data-id="author" type="text" required />
+          </div>
+          <div>
+            <label for="year">Year</label>
+            <input data-id="year" type="number" required />
+          </div>
+          <div>
+            <label for="isComplete">Finished</label>
+            <input data-id="isComplete" type="checkbox" />
+          </div>
+          <button>ADD</button>
+        </form>
+      </section>
+      <section>
+        <div class="section-header items">
+          <div class="top">
+            <h2>My Books</h2>
+            <button data-id="toggle-is-complete"></button>
+          </div>
+          <input
+            data-id="search"
+            type="search"
+            placeholder="Search book by title"
+          />
+        </div>
+        <ul data-id="items"></ul>
+      </section>
+      <section data-id="info-book" class="hidden">
+        <form data-id="info-form">
+          <div>
+            <input data-id="id-info" type="hidden" required />
+            <label for="title">Title</label>
+            <input data-id="title-info" type="text" required />
+          </div>
+          <div>
+            <label for="author">Author</label>
+            <input data-id="author-info" type="text" required />
+          </div>
+          <div>
+            <label for="year">Year</label>
+            <input data-id="year-info" type="number" required />
+          </div>
+          <button>Update</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="./dist/app.js"></script>
+  </body>
+</html>

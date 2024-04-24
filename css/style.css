@@ -1,0 +1,214 @@
+:root {
+  /* --input-focus: #2d8cf0; */
+  /* --font-color: #323232; */
+  /* --font-color-sub: #666; */
+  /* --bg-color: #fff; */
+  /* --bg-color-alt: #666; */
+  /* --main-color: #323232; */
+  /* --black: #000000; */
+  /* --ch-black: #141414; */
+  /* --secondary-color: #fff; */
+  /* --hover-color: #111; */
+  /* --arrow-width: 10px; */
+  /* --arrow-stroke: 2px; */
+  /* --night-rider: #2e2e2e; */
+  /* --white: #ffffff; */
+  /* --af-white: #f3f3f3; */
+  /* --bg-color-alt: #666; */
+  /* --font-color-sub: #666; */
+  /* --main-color: #323232; */
+  --eer-black: #1b1b1b;
+  --ch-white: #e1e1e1;
+  --primary-color: #645bff;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  padding-inline: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+i[data-act='move-book-btn'] {
+  color: #2d8cf0;
+}
+
+i[data-act='delete-book-btn'] {
+  color: red;
+}
+
+i[data-act='info-book-btn'] {
+  color: yellow;
+}
+
+header {
+  width: 100%;
+  padding: 0.5em 1em;
+  position: sticky;
+  top: 0;
+  background-color: var(--eer-black);
+  color: var(--ch-white);
+}
+
+main {
+  padding: 1em;
+  margin-inline: auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+main section .section-header {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+main section .section-header.book {
+  align-items: center;
+  justify-content: space-between;
+}
+
+main section .section-header.items {
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+main section .section-header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section .section-header input[type='search'] {
+  height: 30px;
+  border-radius: 5px;
+}
+
+main section .section-header .top button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  width: 100px;
+  padding-block: 0.5em;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--ch-white);
+}
+
+main section form {
+  padding: 1em;
+  background-color: var(--eer-black);
+  border-radius: 5px;
+}
+
+main section form div {
+  display: flex;
+  flex-direction: column;
+  color: var(--ch-white);
+  margin-block: 0.3em;
+}
+
+main section form div label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+main section form div input {
+  font-size: 1.1rem;
+  padding-block: 0.2em;
+}
+
+main section form div:nth-child(4) {
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+main section form div:has(input[type='checkbox']) {
+  flex-direction: row;
+}
+
+main section form button {
+  width: 100%;
+  background-color: var(--input-focus);
+  padding-block: 0.5em;
+  border-radius: 5px;
+  color: var(--ch-white);
+  border: none;
+  cursor: pointer;
+}
+
+main section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  text-transform: capitalize;
+}
+
+main section ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--eer-black);
+  padding: 0.5em 1em;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+main section ul li .book-item-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+}
+
+main section ul li .book-item-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+main section:nth-child(3).hidden {
+  display: none;
+}
+
+main section:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: #1d1d1d8e;
+  position: fixed;
+  inset: 0;
+}
+
+.off-screen {
+  display: none;
+}
